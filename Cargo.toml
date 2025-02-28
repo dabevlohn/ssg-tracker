@@ -12,4 +12,6 @@ edition = "2024"
 crate-type = ["cdylib"]
 
 [dependencies]
+jsonwebtoken = "9.3.1"
+serde = { version = "1.0.218", features = ["derive"] }
 wasm-bindgen = "0.2.100"

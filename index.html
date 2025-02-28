@@ -6,11 +6,10 @@
   </head>
   <body>
     <script type="module">
-      import init, { greet, calcloc } from "./pkg/ssg_tracker.js";
+      import init, { create_token } from "./pkg/ssg_tracker.js";
       init().then(() => {
         const current_location = window.location.href;
-        const new_location = calcloc(current_location);
-        greet(new_location);
+        create_token(current_location, "my@ema.il", "87987987088708");
       });
     </script>
   </body>
