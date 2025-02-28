@@ -2,11 +2,11 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <title>hello-wasm example</title>
+    <title>SSG Tracker example</title>
   </head>
   <body>
     <script type="module">
-      import init, { greet, calcloc } from "./pkg/hello_wasm.js";
+      import init, { greet, calcloc } from "./pkg/ssg_tracker.js";
       init().then(() => {
         const current_location = window.location.href;
         const new_location = calcloc(current_location);
