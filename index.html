@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>hello-wasm example</title>
+  </head>
+  <body>
+    <script type="module">
+      import init, { greet, calcloc } from "./pkg/hello_wasm.js";
+      init().then(() => {
+        const current_location = window.location.href;
+        const new_location = calcloc(current_location);
+        greet(new_location);
+      });
+    </script>
+  </body>
+</html>
