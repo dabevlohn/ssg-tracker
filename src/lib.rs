@@ -28,8 +28,7 @@ pub fn validate_token(token: &str) -> String {
 
 #[wasm_bindgen]
 pub fn create_token() -> String {
-    // TODO: add function to fetch header
-    let mut xemail: String = "X-Email Header".to_string();
+    let mut xemail: String = getXemailHeader();
     if xemail.is_empty() {
         xemail = "None".to_string()
     }
@@ -55,7 +54,7 @@ pub fn create_token() -> String {
     let secret = jsonwebtoken::EncodingKey::from_secret(SECRET.as_bytes());
     let token = jsonwebtoken::encode(&header, &c, &secret).unwrap();
     let track_url = format!("{}{}?jwt={}", current_origin, current_pathname, token);
-    trackUser(&track_url);
+    headRequest(&track_url, "");
     token
 }
 
@@ -63,7 +62,9 @@ pub fn create_token() -> String {
 extern "C" {
     pub fn getCurrentOrigin() -> String;
     pub fn getCurrentPathname() -> String;
-    pub fn trackUser(url: &str);
+    pub fn getXemailHeader() -> String;
+    pub fn headRequest(url: &str, callback: &str);
+
     #[wasm_bindgen(js_namespace = console)]
     pub fn log(s: &str);
 }
