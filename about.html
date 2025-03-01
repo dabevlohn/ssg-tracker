@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <title>SSG Tracker example</title>
-    <link rel="preload" href="./index.js" as="script" />
+    <script type="text/javascript" src="./index-func.js"></script>
+    <link rel="preload" href="./index-wasm.js" as="script" />
   </head>
   <body>
-    <script type="module" src="./index.js"></script>
+    <script type="text/javascript">
+      // getXemailHeader();
+    </script>
+    <script type="module" src="./index-wasm.js"></script>
     <h1>SSG Tracker example</h1>
     <p>
       There are some links for a SSG Tracker: <a href="/">Index</a> |
