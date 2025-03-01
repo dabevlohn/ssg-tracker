@@ -6,13 +6,15 @@
     <link rel="preload" href="./index.js" as="script" />
   </head>
   <body>
+    <script type="module" src="./index.js"></script>
     <h1>SSG Tracker example</h1>
     <p>
-      There are some links for a SSG Tracker: <a href="/index.html">Index</a> |
+      There are some links for a SSG Tracker: <a href="/">Index</a> |
       <a href="/#tracker2">Tracker 2</a> | <a href="/#tracker3">Tracker 3</a> |
-      <a href="/#tracker4">Tracker 4</a> | <a href="/about.html">About</a> 
+      <a href="/#tracker4">Tracker 4</a> |
+      <a href="/about.html">About</a>
     </p>
-    <pre id="tracker-log"></pre>
-    <script type="module" src="./index.js"></script>
+    <textarea cols="50" rows="10" id="tracker-log-1"></textarea>
+    <textarea cols="50" rows="10" id="tracker-log-2"></textarea>
   </body>
 </html>
