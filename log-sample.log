@@ -1,0 +1,21 @@
+127.0.0.1 - - [01/Mar/2025 14:51:07] "GET /page2.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Mar/2025 14:51:07] "GET /index-func.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Mar/2025 14:51:07] "GET /index-wasm.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Mar/2025 14:51:07] "HEAD /page2.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Mar/2025 14:51:07] "GET /pkg/ssg_tracker.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Mar/2025 14:51:07] "GET /pkg/ssg_tracker_bg.wasm HTTP/1.1" 200 -
+127.0.0.1 - - [01/Mar/2025 14:51:07] code 404, message File not found
+127.0.0.1 - - [01/Mar/2025 14:51:07] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [01/Mar/2025 14:51:07] "HEAD /page2.html?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAiLCJzdWIiOiIvcGFnZTIuaHRtbCIsImF1ZCI6ImRvY3BvcnRhbCIsImN1c3RvbV9jbGFpbSI6InRleHQvaHRtbCIsImV4cCI6OTk5OTk5OTk5OX0.ZYlqBhUanOwo2qpCVhwEBJzNYkdMlTyx549k6epYf1o HTTP/1.1" 304 -
+127.0.0.1 - - [01/Mar/2025 14:51:14] "GET /about.html HTTP/1.1" 304 -
+127.0.0.1 - - [01/Mar/2025 14:51:14] "HEAD /about.html HTTP/1.1" 304 -
+127.0.0.1 - - [01/Mar/2025 14:51:14] "HEAD /about.html?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAiLCJzdWIiOiIvYWJvdXQuaHRtbCIsImF1ZCI6ImRvY3BvcnRhbCIsImN1c3RvbV9jbGFpbSI6InRleHQvaHRtbCIsImV4cCI6OTk5OTk5OTk5OX0.OAklBIwSNq5-TLMT1HwncF8rLchjWEMX13LZYhhKspA HTTP/1.1" 304 -
+127.0.0.1 - - [01/Mar/2025 14:51:18] "GET /page1.html HTTP/1.1" 304 -
+127.0.0.1 - - [01/Mar/2025 14:51:18] "HEAD /page1.html HTTP/1.1" 304 -
+127.0.0.1 - - [01/Mar/2025 14:51:18] "HEAD /page1.html?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAiLCJzdWIiOiIvcGFnZTEuaHRtbCIsImF1ZCI6ImRvY3BvcnRhbCIsImN1c3RvbV9jbGFpbSI6InRleHQvaHRtbCIsImV4cCI6OTk5OTk5OTk5OX0.KlQ1v1z7qy-ljxnyYrfSLD9eM7vbIO6RiAPKLo_wE34 HTTP/1.1" 304 -
+127.0.0.1 - - [01/Mar/2025 14:51:20] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [01/Mar/2025 14:51:20] "HEAD / HTTP/1.1" 304 -
+127.0.0.1 - - [01/Mar/2025 14:51:20] "HEAD /index.html?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAiLCJzdWIiOiIvaW5kZXguaHRtbCIsImF1ZCI6ImRvY3BvcnRhbCIsImN1c3RvbV9jbGFpbSI6InRleHQvaHRtbCIsImV4cCI6OTk5OTk5OTk5OX0.-pzTEUy3dPhiy59X-ro30lPvjfjZJTtrMSIc86JIRrU HTTP/1.1" 304 -
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+
+Keyboard interrupt received, exiting.

@@ -1,5 +1,7 @@
 use serde::{Deserialize, Serialize};
 use wasm_bindgen::prelude::*;
+use wasm_bindgen_futures::JsFuture;
+use web_sys::{Request, RequestInit, RequestMode, Response};
 
 #[derive(Deserialize, Serialize, Debug)]
 struct Claims {
@@ -12,6 +14,22 @@ struct Claims {
 
 const SECRET: &str = "ecpkdocs";
 const AUDIENCE: &str = "docportal";
+
+#[wasm_bindgen]
+pub async fn logparser(logurl: &str) -> Result<JsValue, JsValue> {
+    let opts = RequestInit::new();
+    opts.set_method("GET");
+    opts.set_mode(RequestMode::Cors);
+    let request = Request::new_with_str_and_init(logurl, &opts)?;
+    request.headers().set("Accept", "text/plain")?;
+
+    let window = web_sys::window().unwrap();
+    let resp_value = JsFuture::from(window.fetch_with_request(&request)).await?;
+    let resp: Response = resp_value.dyn_into().unwrap();
+    let log_text = JsFuture::from(resp.text()?).await?;
+
+    Ok(log_text)
+}
 
 #[wasm_bindgen]
 pub fn validate_token(token: &str) -> String {
