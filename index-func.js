@@ -1,20 +1,16 @@
-function getXemailHeader() {
-  var header = "-000-";
+function trackUser(url) {
   let req = new XMLHttpRequest();
-  req.open("GET", window.location.href, true);
+  req.open("GET", url, true);
   req.send(null);
   req.onload = () => {
-    header = req.getResponseHeader("content-type");
+    let header = req.getResponseHeader("content-type");
     console.log("Response Header:\n", header);
   };
-  return header;
 }
 function getCurrentOrigin() {
   var origin = window.location.origin;
   if (origin == "null") {
     origin = window.location.protocol + "//" + window.location.host;
-  } else {
-    origin += "/";
   }
   return origin;
 }
